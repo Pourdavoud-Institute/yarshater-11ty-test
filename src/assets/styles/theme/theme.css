@@ -1,0 +1,61 @@
+:root {
+    /* Primary Colors */
+    --ucla-primary-blue: #2774ae;
+    --ucla-primary-gold: #ffd100;
+    /* Secondary Colors */
+    --ucla-darkest-blue: #003b5c;
+    --ucla-darker-blue: #005587;
+    --ucla-lighter-blue: #8bb8ee;
+    --ucla-lightest-blue: #daebfe;
+    --ucla-darkest-gold: #ffb81c;
+    --ucla-darker-gold: #ffc72c;
+    /* Neutral Colors */
+    --ucla-black: #000000;
+    --ucla-gray-9: #333333;
+    --ucla-gray-8: #666666;
+    --ucla-gray-7: #999999;
+    --ucla-gray-6: #cccccc;
+    --ucla-gray-5: #d9d9d9;
+    --ucla-gray-4: #e5e5e5;
+    --ucla-gray-3: #ebebeb;
+    --ucla-gray-2: #f2f2f2;
+    --ucla-gray-1: #f7f7f7;
+    --ucla-white: #ffffff;
+    --ucla-white-shade: color-mix(in srgb, var(--ucla-white), transparent 25%);
+    /* Interactive Colors */
+    --ucla-state-blue--default: #00598c;
+    --ucla-state-blue--hover: #0079bf;
+    --ucla-state-blue--active: #003b5c;
+    --ucla-state-blue--focus: #00568c;
+    --ucla-state-blue--visited: #5223b0;
+    --ucla-state-gold--default: #ffd100;
+    --ucla-state-gold--hover: #ffe500;
+    --ucla-state-gold--active: #ffbf0f;
+    --ucla-state-gold--focus: #ffe500;
+    --ucla-state-gold--visited: #ffffff;
+    /* Semantic Colors */
+    --ucla-error: #d60000;
+    --ucla-success: #007339;
+    --ucla-warning: #f57f17;
+    --ucla-primary-alert: #8bb8e8;
+    --ucla-secondary-alert: #999999;
+
+    /* Shoelace theme customizations */
+    --sl-font-sans: var(--font-primary);
+    --sl-font-serif: var(--font-heading);
+
+    /* Semantic aliases */
+    --theme--site--text: rgb(51, 51, 51);
+    --theme--site--text-light: var(--ucla-gray-8);
+    --theme--site--heading: var(--ucla-black);
+    --theme--site--border: var(--ucla-gray-5);
+    --theme--site--icon: var(--ucla-primary-blue);
+}
+
+body {
+    color: var(--theme--site--text);
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+    color: var(--theme--site--heading);
+}

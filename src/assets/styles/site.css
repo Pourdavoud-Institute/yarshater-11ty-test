@@ -1,0 +1,33 @@
+@layer reset, ucla, theme, props, components, main, overrides;
+
+/* Reset */
+@import "reset.css" layer(reset);
+
+/* Theme */
+/* @import "theme/ucla.css" layer(ucla); */
+@import "theme/shoelace.css" layer(theme);
+@import "theme/theme.css" layer(theme);
+
+/* Open Props and Other Variables */
+@import "open-props/sizes.css" layer(props);
+@import "open-props/fonts.css" layer(props);
+@import "open-props/shadows.css" layer(props);
+@import "open-props/borders.css" layer(props);
+@import "theme/typography.css" layer(props);
+@import "theme/layout.css" layer(props);
+
+/* Components */
+@import "components/controls.css" layer(components);
+@import "components/elements.css" layer(components);
+
+/* Main */
+@import "block/site-header.css" layer(main);
+@import "block/site-footer.css" layer(main);
+@import "block/page.css" layer(main);
+@import "block/page-home.css" layer(main);
+@import "block/page-inner.css" layer(main);
+@import "block/page-unique.css" layer(main);
+
+/* Overrides */
+@import "utilities.css" layer(overrides);
+@import "exception.css" layer(overrides);

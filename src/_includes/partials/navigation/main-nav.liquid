@@ -1,0 +1,98 @@
+{% comment %}
+    <nav id="nav-main" aria-label="Main Menu" class="primary-nav | cluster">
+        <div x-popover:group class="nav-items | cluster">
+            <div x-data x-popover class="nav-item">
+                <button x-popover:button>About Us</button>
+                <div x-popover:panel x-cloak x-transition:origin.top class="nav-item__panel | flow allegro">
+                    <a href="#">About Ehsan Yarshater</a>
+                    <a href="#">Affiliated Faculty</a>
+                    <a href="#">Leadership & Staff</a>
+                    <a href="#">News</a>
+                    <a href="/research/grants-and-fellowships/">Grants and Fellowships</a>
+                </div>
+            </div>
+            <div x-data x-popover class="nav-item">
+                <button x-popover:button>Research</button>
+                <div x-popover:panel x-cloak x-transition:origin.top class="nav-item__panel | flow allegro">
+                    <a href="/research/iranian-library/" hx-boost="true">Iranian Library</a>
+                    <a href="/research/a-history-of-persian-literature/" hx-boost="true">A History of Persian Literature</a>
+                    <a href="/research/encyclopedia-of-the-ancient-iranian-world/" hx-boost="true"
+                        >Encyclopedia of the Ancient Iranian World</a
+                    >
+                    <a href="/research/publications/" hx-boost="true">Open Access Publications</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="#">Events</a>
+            </div>
+            <div class="nav-item">
+                <a href="#">Media</a>
+            </div>
+        </div>
+    </nav>
+{% endcomment %}
+
+<nav aria-label="Main Navigation" class="nav-primary | row">
+    <ul class="cluster">
+        <li>
+            <sl-dropdown>
+                <sl-button slot="trigger" caret class="dropdown-trigger">About</sl-button>
+                <div class="panel">
+                    <ul class="flow flat">
+                        <li>
+                            <a href="/about/" class="nav-link">About the Center</a>
+                        </li>
+                        <li>
+                            <a href="/about/about-ehsan-yarshater/" class="nav-link">About Ehsan Yarshater</a>
+                        </li>
+                        <li>
+                            <a href="/about/affiliated-faculty/" class="nav-link">Affiliated Faculty</a>
+                        </li>
+                        <li>
+                            <a href="/about/staff/" class="nav-link">Leadership & Staff</a>
+                        </li>
+                        <li>
+                            <a href="/about/grants-and-fellowships/" class="nav-link">Grants & Fellowships</a>
+                        </li>
+                    </ul>
+                </div>
+            </sl-dropdown>
+        </li>
+        <li>
+            <sl-dropdown>
+                <sl-button slot="trigger" caret class="dropdown-trigger">Research</sl-button>
+                <div class="panel">
+                    <ul class="flow flat">
+                        <li>
+                            <a href="/research/a-history-of-persian-literature/" class="nav-link" hx-boost="true"
+                                >A History of Persian Literature</a
+                            >
+                        </li>
+                        <li>
+                            <a href="/research/iranian-library/" class="nav-link" hx-boost="true">Iranian Library</a>
+                        </li>
+                        <li>
+                            <a href="/research/encyclopedia/" class="nav-link" hx-boost="true"
+                                >Encyclopedia of the Ancient Iranian World</a
+                            >
+                        </li>
+                        <li>
+                            <a href="/research/publications/" class="nav-link" hx-boost="true"
+                                >Open Access Publications</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </sl-dropdown>
+        </li>
+        <li>
+            <a href="/news/" class="nav-link">News</a>
+        </li>
+        <li>
+            <a href="/events/" class="nav-link">Events</a>
+        </li>
+        <li>
+            <a href="/media/" class="nav-link">Media</a>
+        </li>
+    </ul>
+</nav>

@@ -1,0 +1,140 @@
+.page.a-history-of-persian-literature {
+    & .poets-list {
+        margin: 0;
+        margin-block-start: var(--space-8);
+        gap: 2rem;
+
+        & li {
+            margin: 0;
+            list-style: none;
+            position: relative;
+            overflow: hidden;
+
+            &:hover {
+                & .text {
+                    bottom: 0;
+
+                    & p {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        & .text {
+            --flow-space: 0.5rem;
+            position: absolute;
+            z-index: 2;
+            bottom: -2rem;
+            padding: 1.5rem;
+            color: var(--ucla-white-shade);
+            transition: bottom 0.5s;
+
+            & p {
+                opacity: 0;
+                transition: opacity 0.3s 0.2s;
+            }
+        }
+
+        & h3 {
+            /* font-size: 2rem; */
+            color: var(--ucla-white);
+        }
+
+        & .overlay {
+            position: absolute;
+            z-index: 1;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            mask-image: linear-gradient(to top, black, transparent);
+        }
+
+        & img {
+            aspect-ratio: 7/5;
+            object-fit: cover;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    & .scope {
+        & h2 {
+            margin-block-start: var(--layout--gutter-spacing);
+        }
+
+        & sl-details::part(summary) {
+            font-family: var(--font-heading);
+            font-size: var(--font-size-larger);
+        }
+
+        & ol {
+            padding-inline-start: var(--size-8);
+
+            & li {
+                list-style: upper-roman;
+            }
+        }
+    }
+}
+
+.page.publications {
+    --sidebar-min-width: 18rem;
+
+    & .content-sections > * {
+        margin-block-start: var(--layout--section-spacing);
+    }
+
+    & .documents {
+        margin-block-start: var(--layout--section-spacing);
+
+        & .document-list {
+            list-style: none;
+            column-gap: var(--size-5);
+            row-gap: var(--size-9);
+
+            & > * {
+                grid-column: span 3;
+            }
+
+            & li {
+                margin: 0;
+            }
+        }
+
+        & .document {
+            position: relative;
+            font-size: var(--font-size-1);
+
+            & h3 {
+                font-size: var(--font-size-3);
+            }
+
+            & p {
+                color: var(--theme--site--text-light);
+            }
+
+            & .tag {
+                position: absolute;
+                top: 0.5rem;
+                right: 0.5rem;
+            }
+
+            & .image-link {
+                position: relative;
+                max-width: 13rem;
+                transition: all 0.3s;
+
+                &:hover {
+                    box-shadow: var(--shadow-3);
+                    transform: translateY(-0.75rem);
+                }
+            }
+        }
+
+        & input[name="search"] {
+            min-width: 16rem;
+        }
+    }
+}

@@ -1,0 +1,389 @@
+{% layout 'layouts/base.liquid' %}
+
+{%- block main -%}
+<main class="page home">
+    <article class="hero">
+        <div class="text | content-wrapper">
+            <header class="">
+                <h1>{{ title }}</h1>
+            </header>
+        </div>
+        <img src="/assets/images/Demotte_Shahname_002.jpg" eleventy:widths="1600" loading="eager" alt="">
+    </article>
+    {%- block intro -%}
+    {%- endblock -%}
+    {%- block content -%}
+    {%- endblock -%}
+    {% comment %}
+        <section class="ucla container margin-x-auto trim-inline">
+            <div class="col">
+                <article class="ucla-card ucla-has-background-grey-03">
+                    <a href="#" class="ucla-card__image-link | frame image-scale-in">
+                        <img
+                            src="/assets/images/ehsan-yarshater.jpg"
+                            alt="Ehsan yarshater"
+                            class="ratio-landscape"
+                            eleventy:widths="600"
+                        >
+                    </a>
+                    <div class="ucla-card__body">
+                        <h3 class="ucla-card__title">About Ehsan Yarshater</h3>
+                        <p class="ucla-card__description">
+                            The Yarshater Center carries forth the legacy of an iconic scholar, the late Professor Eshan
+                            Yarshater, by initiating a robust publication program at UCLA.
+                        </p>
+                        <a class="ucla-btn ucla-btn--primary" href="#">Learn More</a>
+                    </div>
+                </article>
+            </div>
+            <div class="col">
+                <article class="ucla-card ucla-has-background-grey-03">
+                    <a href="#" class="ucla-card__image-link | frame image-scale-in">
+                        <img
+                            src="/assets/images/folio-180v-shahnameh.jpg"
+                            alt=""
+                            class="ratio-landscape"
+                            eleventy:widths="600"
+                        >
+                    </a>
+                    <div class="ucla-card__body">
+                        <h3 class="ucla-card__title">Our Research</h3>
+                        <p class="ucla-card__description">
+                            At the heart of the Yarshater Center are research initiatives that aim to capture the spirit of
+                            the scholarly activities pioneered by Ehsan Yarshater.
+                        </p>
+                        <a class="ucla-btn ucla-btn--primary" href="#">Learn More</a>
+                    </div>
+                </article>
+            </div>
+            <div class="col">
+                <article class="ucla-card ucla-has-background-grey-03">
+                    <a href="#" class="ucla-card__image-link | frame image-scale-in">
+                        <img
+                            src="/assets/images/mostafa-meraji-apdL8vEMJh8-unsplash.jpg"
+                            alt=""
+                            class="ratio-landscape"
+                            eleventy:widths="600"
+                        >
+                    </a>
+                    <div class="ucla-card__body">
+                        <h3 class="ucla-card__title">Media</h3>
+                        <p class="ucla-card__description">
+                            The Center’s video library of events, lectures, and workshops complements our research,
+                            providing a citable resource tool in the age of online and hybrid learning.
+                        </p>
+                        <a class="ucla-btn ucla-btn--primary" href="#">Learn More</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="events">
+            <h2 class="ucla container margin-x-auto mb-7">Upcoming Events</h2>
+            <div class="ucla container margin-x-auto trim-inline">
+                <div class="col">
+                    <article
+                        class="ucla-card ucla-card__event ucla-has-background-grey-03"
+                    >
+                        <a class="ucla-card__event-image-link" href="#">
+                            <img
+                                src="/assets/images/persepolis-kermani.jpg"
+                                alt="alt"
+                                class="ratio-landscape"
+                                eleventy:widths="600"
+                            >
+                        </a>
+                        <div class="ucla-card__event-body">
+                            <time class="ucla-card__event-date" datetime="">
+                                <span class="ucla-card__event-month">Oct</span>
+                                <span class="ucla-card__event-day">10</span>
+                            </time>
+                            <div class="ucla-card__event-content">
+                                <h3 class="ucla-card__title">
+                                    <a class="ucla-card__title-link" href="#">Event Title</a>
+                                </h3>
+                                <p class="ucla-card__description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col">
+                    <article
+                        class="ucla-card ucla-card__event ucla-has-background-grey-03"
+                    >
+                        <a class="ucla-card__event-image-link" href="#">
+                            <img
+                                src="/assets/images/persepolis-kermani.jpg"
+                                alt="alt"
+                                class="ratio-landscape"
+                                eleventy:widths="600"
+                            >
+                        </a>
+                        <div class="ucla-card__event-body">
+                            <time class="ucla-card__event-date" datetime="">
+                                <span class="ucla-card__event-month">Oct</span>
+                                <span class="ucla-card__event-day">10</span>
+                            </time>
+                            <div class="ucla-card__event-content">
+                                <h3 class="ucla-card__title">
+                                    <a class="ucla-card__title-link" href="#">Event Title</a>
+                                </h3>
+                                <p class="ucla-card__description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col">
+                    <article
+                        class="ucla-card ucla-card__event ucla-has-background-grey-03"
+                    >
+                        <a class="ucla-card__event-image-link" href="#">
+                            <img
+                                src="/assets/images/persepolis-kermani.jpg"
+                                alt="alt"
+                                class="ratio-landscape"
+                                eleventy:widths="600"
+                            >
+                        </a>
+                        <div class="ucla-card__event-body">
+                            <time class="ucla-card__event-date" datetime="">
+                                <span class="ucla-card__event-month">Oct</span>
+                                <span class="ucla-card__event-day">10</span>
+                            </time>
+                            <div class="ucla-card__event-content">
+                                <h3 class="ucla-card__title">
+                                    <a class="ucla-card__title-link" href="#">Event Title</a>
+                                </h3>
+                                <p class="ucla-card__description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="ucla container margin-x-auto mt-8 center-all">
+                <a class="ucla-btn ucla-btn--primary" href="/events">See All Events</a>
+            </div>
+        </section>
+        <section class="ucla-banner__quote">
+            <div class="container">
+                <div class="ucla">
+                    <div class="col span_10_of_12 margin-x-auto">
+                        <div class="ucla-banner__quote-body">
+                            <img
+                                src="/assets/images/ehsan-yarshater.jpg"
+                                alt="Ehsan yarshater"
+                                class="ucla-banner__quote-image ratio-square"
+                                eleventy:widths="600"
+                            >
+                            <div class="ucla-banner__quote-content">
+                                <figure>
+                                    <blockquote>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eaque unde
+                                            cupiditate quaerat eligendi debitis tempore, consequatur nihil assumenda eius.
+                                        </p>
+                                    </blockquote>
+                                    <figcaption><cite>Ehsan Yarshater</cite></figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="faq | ucla container margin-x-auto py-10">
+            <h2 class="mb-8">Frequently Asked Questions</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <h4 class="accordion__heading">
+                        <button
+                            type="button"
+                            class="accordion__heading-button"
+                            id="accordionOneButton"
+                            aria-expanded="true"
+                            aria-controls="accordionOne"
+                        >
+                            Royce Hall
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                  d="M18 9.41L16.59 8L12 12.58L7.41 8L6 9.41L12 15.41L18 9.41Z"
+                                  fill="#333333"
+                                />
+                            </svg>
+                        </button>
+                    </h4>
+                    <div
+                        aria-labelledby="accordionOneButton"
+                        class="accordion__content"
+                        id="accordionOne"
+                    >
+                        <p>
+                            Royce Hall is a building on the campus of the University of California, Los Angeles. Designed by
+                            the Los Angeles firm of Allison &amp; Allison and completed in 1929, it is one of the four
+                            original buildings on UCLA's Westwood campus and has come to be the defining image of the
+                            university.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h4 class="accordion__heading">
+                        <button
+                            type="button"
+                            class="accordion__heading-button"
+                            id="accordionTwoButton"
+                            aria-expanded="false"
+                            aria-controls="accordionTwo"
+                        >
+                            Fowler Museum
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                  d="M18 9.41L16.59 8L12 12.58L7.41 8L6 9.41L12 15.41L18 9.41Z"
+                                  fill="#333333"
+                                />
+                            </svg>
+                        </button>
+                    </h4>
+                    <div
+                        class="accordion__content"
+                        aria-labelledby="accordionTwoButton"
+                        id="accordionTwo"
+                    >
+                        <p>
+                            The Fowler Museum at UCLA, commonly known as The Fowler, and formerly Museum of Cultural History
+                            and Fowler Museum of Cultural History, is a museum on the campus of the University of
+                            California, Los Angeles (UCLA) which explores art and material culture primarily from Africa,
+                            Asia and the Pacific, and the Americas, past and present.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h4 class="accordion__heading">
+                        <button
+                            type="button"
+                            class="accordion__heading-button"
+                            id="accordionThreeButton"
+                            aria-expanded="false"
+                            aria-controls="accordionThree"
+                        >
+                            Luskin Conference Center
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                  d="M18 9.41L16.59 8L12 12.58L7.41 8L6 9.41L12 15.41L18 9.41Z"
+                                  fill="#333333"
+                                />
+                            </svg>
+                        </button>
+                    </h4>
+                    <div
+                        aria-labelledby="accordionThreeButton"
+                        class="accordion__content"
+                        id="accordionThree"
+                    >
+                        <p>
+                            The UCLA Meyer and Renee Luskin School of Public Affairs, commonly known as the UCLA Luskin
+                            School of Public Affairs, is the public affairs/public service graduate school at the University
+                            of California, Los Angeles. The school consists of three graduate departments—Public Policy,
+                            Social Welfare, and Urban Planning—and an undergraduate program in Public Affairs that began
+                            accepting students in 2018. In all, the school offers three undergraduate minors, the
+                            undergraduate major, three master's degrees, and two doctoral degrees.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ucla-banner__email ucla-prose">
+            <div class="container">
+                <div class="ucla">
+                    <div class="col">
+                        <h4 class="ucla-banner__email-title">Sign up</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultrices semper fringilla. Ut
+                            viverra lacinia vestibulum. Vestibulum accumsan id massa ut volutpat.
+                        </p>
+                        <form class="ucla-banner__email-form">
+                            <div class="ucla-field">
+                                <label class="ucla-field__label" for="uclaEmailField">Email</label>
+                                <div class="ucla-field__control">
+                                    <input
+                                        class="ucla-field__input"
+                                        id="uclaEmailField"
+                                        type="email"
+                                        placeholder="Email"
+                                    >
+                                </div>
+                            </div>
+                            <div class="ucla-field">
+                                <label class="ucla-field__label" for="uclaFirstName">First Name</label>
+                                <div class="ucla-field__control">
+                                    <input
+                                        class="ucla-field__input"
+                                        id="uclaFirstName"
+                                        type="text"
+                                        placeholder="First Name"
+                                    >
+                                </div>
+                            </div>
+                            <div class="ucla-field">
+                                <label class="ucla-field__label" for="uclaLastName">Last Name</label>
+                                <div class="ucla-field__control">
+                                    <input
+                                        class="ucla-field__input"
+                                        id="uclaLastName"
+                                        type="text"
+                                        placeholder="Last Name"
+                                    >
+                                </div>
+                            </div>
+                            <div class="ucla-field">
+                                <label class="ucla-field__label" for="uclaZipCode">Zip Code</label>
+                                <div class="ucla-field__control">
+                                    <input
+                                        class="ucla-field__input"
+                                        id="uclaZipCode"
+                                        type="text"
+                                        placeholder="Text input"
+                                    >
+                                </div>
+                            </div>
+
+                            <div class="ucla-field">
+                                <button class="ucla-btn ucla-btn--primary">Sign up</button>
+                            </div>
+                        </form>
+                        <p class="ucla-banner__email-text">
+                            You may unsubscribe at any time. Zip code is used to improve the content we share. Refer to our
+                            Terms of Use for more information on how we store and protect your data.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endcomment %}
+</main>
+{%- endblock -%}

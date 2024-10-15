@@ -1,0 +1,20 @@
+{% comment %}
+    <nav class="ucla-breadcrumb">
+        <ul class="ucla-breadcrumb__list">
+            <li class="ucla-breadcrumb__list-item"><a href="/" class="ucla-breadcrumb__link">Home</a></li>
+            {% for link in parentLinks %}
+                <li class="ucla-breadcrumb__list-item">
+                    <a href="{{ link.url }}" class="ucla-breadcrumb__link">{{ link.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
+{% endcomment %}
+<sl-breadcrumb>
+    <sl-breadcrumb-item href="/" target="_self">Home</sl-breadcrumb-item>
+    {% for link in parentLinks %}
+        <sl-breadcrumb-item href="{{ link.url }}" target="_self">
+            {{ link.title }}
+        </sl-breadcrumb-item>
+    {% endfor %}
+</sl-breadcrumb>

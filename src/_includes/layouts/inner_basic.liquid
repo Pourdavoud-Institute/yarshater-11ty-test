@@ -1,0 +1,25 @@
+{% layout 'layouts/base.liquid' %}
+
+{%- block main -%}
+<main class="page inner {{ page.fileSlug -}}">
+    <article class="hero basic">
+        <div class="content-wrapper">
+            <header class="flow moderato center-all">
+                <h1>{{ title }}</h1>
+            </header>
+        </div>
+    </article>
+    <div class="full-width-breadcrumbs-wrapper">
+        {%- block breadcrumbs -%}
+        {%- endblock -%}
+        {% comment %}
+            <div class="content-wrapper">
+                {%- assign parentLinks = collections.all | eleventyNavigationBreadcrumb: title, navOptions -%}
+                {%- render 'partials/navigation/breadcrumbs.liquid' with parentLinks as parentLinks -%}
+            </div>
+        {% endcomment %}
+    </div>
+    {%- block content -%}
+    {%- endblock -%}
+</main>
+{%- endblock -%}

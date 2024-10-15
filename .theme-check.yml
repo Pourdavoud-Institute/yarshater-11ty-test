@@ -1,0 +1,16 @@
+root: src/_includes
+
+# Disable Liquid theme checks
+UndefinedObject:
+    enabled: false
+UnknownFilter:
+    enabled: false
+MissingTemplate:
+    enabled: false
+ImgWidthAndHeight:
+    enabled: false
+RemoteAsset:
+    enabled: false
+VariableName:
+    severity: info
+    format: camelCase

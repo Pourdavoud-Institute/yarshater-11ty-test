@@ -1,0 +1,13 @@
+/* Mitigate flash of undefined custom elements */
+:not(:defined) {
+    visibility: hidden;
+}
+
+body {
+    opacity: 0;
+
+    &.page-ready {
+        opacity: 1;
+        transition: 0.25s opacity;
+    }
+}

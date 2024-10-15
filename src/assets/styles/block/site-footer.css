@@ -1,0 +1,23 @@
+.site-footer {
+    & .department-footer {
+        color: var(--ucla-white);
+        background-color: var(--ucla-darker-blue);
+        padding-block: var(--layout--section-spacing);
+
+        & .grid-12 {
+            & .info {
+                grid-column: span 5;
+            }
+
+            & .nav-wrapper {
+                grid-column: span 7;
+            }
+        }
+    }
+
+    & .ucla-global-footer {
+        color: var(--ucla-lighter-blue);
+        background-color: var(--ucla-darkest-blue);
+        padding-block: var(--layout--gutter-spacing);
+    }
+}

@@ -1,0 +1,45 @@
+<nav id="nav-main" class="ucla-main-nav" aria-label="Main Menu">
+    <ul class="ucla-main-nav__list">
+        {% for entry in entries %}
+            {% if entry.children.size > 0 %}
+                <li class="ucla-main-nav__item ucla-main-nav__item--has-children" aria-haspopup="true">
+                    <a href="{% navItemHref entry.navItem %}" class="ucla-main-nav__link">
+                        {% navItemTitle entry.navItem %}
+                    </a>
+                    <button
+                        class="ucla-main-nav__toggle"
+                        aria-expanded="false"
+                        aria-label="toggle"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            xml:space="preserve"
+                            viewBox="12 17.2 24 14.8"
+                        >
+                            <title>Arrow Down</title>
+                            <path
+                                class="down-arrow--blue"
+                                d="m14.8 17.2 9.2 9.2 9.2-9.2L36 20 24 32 12 20l2.8-2.8z"
+                            ></path>
+                        </svg>
+                    </button>
+                    <ul class="ucla-main-nav__sublist">
+                        {% for childEntry in entry.children %}
+                            <li class="ucla-main-nav__item">
+                                <a href="{% navItemHref childEntry.navItem %}" class="ucla-main-nav__link">
+                                    {% navItemTitle childEntry.navItem %}
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% else %}
+                <li class="ucla-main-nav__item">
+                    <a href="{% navItemHref entry.navItem %}" class="ucla-main-nav__link">
+                        {% navItemTitle entry.navItem %}
+                    </a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</nav>

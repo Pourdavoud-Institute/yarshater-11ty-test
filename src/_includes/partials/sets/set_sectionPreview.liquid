@@ -1,0 +1,16 @@
+<section class="ucla">
+    {% for item in data.items %}
+        <div class="col">
+            <article class="ucla-card ucla-has-background-grey-03">
+                <a href="#" class="ucla-card__image-link">
+                    <img src="/assets/images/sadi-text.jpg" alt="" class="ratio-landscape" eleventy:widths="600">
+                </a>
+                <div class="ucla-card__body">
+                    <h3 class="ucla-card__title">{{ item.heading }}</h3>
+                    <p class="ucla-card__description">{{ item.summary }}</p>
+                    <a class="ucla-btn ucla-btn--primary" href="#">Learn More</a>
+                </div>
+            </article>
+        </div>
+    {% endfor %}
+</section>

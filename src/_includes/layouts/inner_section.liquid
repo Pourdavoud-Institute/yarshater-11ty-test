@@ -1,0 +1,26 @@
+{% layout 'layouts/base.liquid' %}
+
+{%- block main -%}
+<main class="page inner {{ page.fileSlug -}}">
+    <article class="hero section">
+        <div class="content-wrapper">
+            <header class="flow largo">
+                <h1>{{ title }}</h1>
+                <figure class="frame">
+                    <img
+                        src="/assets/images/{{ image.src }}"
+                        alt="{{ image.alt }}"
+                        eleventy:widths="800"
+                        loading="eager"
+                    >
+                    {% comment %} <figcaption>{{ image.caption }}</figcaption> {% endcomment %}
+                </figure>
+            </header>
+        </div>
+        {%- block pageNavigation -%}
+        {%- endblock -%}
+    </article>
+    {%- block content -%}
+    {%- endblock -%}
+</main>
+{% endblock %}

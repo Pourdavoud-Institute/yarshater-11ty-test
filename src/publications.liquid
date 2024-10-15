@@ -1,0 +1,259 @@
+---
+title: Open Access Publications
+permalink: /research/publications/
+eleventyNavigation:
+    key: Open Access Publications
+    parent: Research
+navOptions:
+    includeSelf: true
+---
+{% layout 'layouts/inner_basic.liquid' %}
+{%- block breadcrumbs -%}
+<div class="content-wrapper">
+    {%- assign parentLinks = collections.all | eleventyNavigationBreadcrumb: title, navOptions -%}
+    {%- render 'partials/navigation/breadcrumbs.liquid' with parentLinks as parentLinks -%}
+</div>
+{%- endblock -%}
+
+{% block content %}
+<div class="content-sections spacing-end">
+    <div class="content-wrapper">
+        <div class="with-sidebar">
+            <div>
+                <article>
+                    <p class="font-lg">
+                        The Yarshater Center offers open access to a library of publications from a multitude of
+                        original sources. The goal of this library is to engage an interested, global audience, as well
+                        as broadly raise awareness of the contribution of the Iranian element to the ancient worlds.
+                    </p>
+                </article>
+                <article class="documents with-border-top | flow adagio">
+                    <h2>Publications Library</h2>
+                    <div class="cluster">
+                        <div>
+                            <sl-input label="Search" type="search" placeholder="Type to search"></sl-input>
+                            {% comment %}
+                                <label for="search" class="ucla-field__label"><strong>Search</strong></label>
+                                <input
+                                    name="search"
+                                    id="search"
+                                    type="search"
+                                    class="ucla-field__input"
+                                    placeholder="Search publications"
+                                >
+                            {% endcomment %}
+                        </div>
+                        <div>
+                            <sl-select label="Sort by" value="titleAsc">
+                                <sl-option value="titleAsc">Title A-Z</sl-option>
+                                <sl-option value="titleDesc">Title Z-A</sl-option>
+                                <sl-option value="dateDesc">Publication Date</sl-option>
+                            </sl-select>
+                            {% comment %}
+                                <label for="sort" class="ucla-field__label"><strong>Sort</strong></label>
+                                <select name="sort" id="sort" class="ucla-field__select">
+                                    <option value="titleDesc" selected>Title A-Z</option>
+                                    <option value="titleAsc">Title Z-A</option>
+                                    <option value="dateDesc">Publication Date</option>
+                                </select>
+                            {% endcomment %}
+                        </div>
+                    </div>
+                    <ul class="document-list | grid-12">
+                        <li>
+                            <article class="document | flow moderato">
+                                <a class="image-link" href="#">
+                                    <sl-tag variant="primary" pill class="tag">Open Access</sl-tag>
+                                    <img
+                                        src="/assets/images/book-cover-placeholder.jpg"
+                                        alt=""
+                                        eleventy:widths="600"
+                                        loading="lazy"
+                                        decoding="async"
+                                    >
+                                </a>
+                                <div class="flow allegro">
+                                    <a class="ucla-card__link" href="#"><h3>Document Title</h3></a>
+                                    <div class="flow presto">
+                                        <p>Document details</p>
+                                        <p class="with-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 242.7-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7 288 32zM64 352c-35.3 0-64 28.7-64 64l0 32c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-32c0-35.3-28.7-64-64-64l-101.5 0-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352 64 352zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/>
+                                            </svg>
+                                            <span>Download</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                        <li>
+                            <article class="document | flow moderato">
+                                <a class="image-link" href="#">
+                                    <sl-tag variant="primary" pill class="tag">Open Access</sl-tag>
+                                    <img
+                                        src="/assets/images/book-cover-placeholder.jpg"
+                                        alt=""
+                                        eleventy:widths="600"
+                                        loading="lazy"
+                                        decoding="async"
+                                    >
+                                </a>
+                                <div class="flow allegro">
+                                    <a class="ucla-card__link" href="#"><h3>Document Title</h3></a>
+                                    <div class="flow presto">
+                                        <p>Document details</p>
+                                        <p class="with-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 242.7-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7 288 32zM64 352c-35.3 0-64 28.7-64 64l0 32c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-32c0-35.3-28.7-64-64-64l-101.5 0-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352 64 352zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/>
+                                            </svg>
+                                            <span>Download</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                        <li>
+                            <article class="document | flow moderato">
+                                <a class="image-link" href="#">
+                                    <sl-tag variant="primary" pill class="tag">Open Access</sl-tag>
+                                    <img
+                                        src="/assets/images/book-cover-placeholder.jpg"
+                                        alt=""
+                                        eleventy:widths="600"
+                                        loading="lazy"
+                                        decoding="async"
+                                    >
+                                </a>
+                                <div class="flow allegro">
+                                    <a class="ucla-card__link" href="#"><h3>Document Title</h3></a>
+                                    <div class="flow presto">
+                                        <p>Document details</p>
+                                        <p class="with-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 242.7-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7 288 32zM64 352c-35.3 0-64 28.7-64 64l0 32c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-32c0-35.3-28.7-64-64-64l-101.5 0-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352 64 352zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/>
+                                            </svg>
+                                            <span>Download</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                        <li>
+                            <article class="document | flow moderato">
+                                <a class="image-link" href="#">
+                                    <sl-tag variant="primary" pill class="tag">Open Access</sl-tag>
+                                    <img
+                                        src="/assets/images/book-cover-placeholder.jpg"
+                                        alt=""
+                                        eleventy:widths="600"
+                                        loading="lazy"
+                                        decoding="async"
+                                    >
+                                </a>
+                                <div class="flow allegro">
+                                    <a class="ucla-card__link" href="#"><h3>Document Title</h3></a>
+                                    <div class="flow presto">
+                                        <p>Document details</p>
+                                        <p class="with-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 242.7-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7 288 32zM64 352c-35.3 0-64 28.7-64 64l0 32c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-32c0-35.3-28.7-64-64-64l-101.5 0-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352 64 352zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/>
+                                            </svg>
+                                            <span>Download</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                        <li>
+                            <article class="document | flow moderato">
+                                <a class="image-link" href="#">
+                                    <sl-tag variant="primary" pill class="tag">Open Access</sl-tag>
+                                    <img
+                                        src="/assets/images/book-cover-placeholder.jpg"
+                                        alt=""
+                                        eleventy:widths="600"
+                                        loading="lazy"
+                                        decoding="async"
+                                    >
+                                </a>
+                                <div class="flow allegro">
+                                    <a class="ucla-card__link" href="#"><h3>Document Title</h3></a>
+                                    <div class="flow presto">
+                                        <p>Document details</p>
+                                        <p class="with-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 242.7-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7 288 32zM64 352c-35.3 0-64 28.7-64 64l0 32c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-32c0-35.3-28.7-64-64-64l-101.5 0-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352 64 352zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/>
+                                            </svg>
+                                            <span>Download</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                        <li>
+                            <article class="document | flow moderato">
+                                <a class="image-link" href="#">
+                                    <sl-tag variant="primary" pill class="tag">Open Access</sl-tag>
+                                    <img
+                                        src="/assets/images/book-cover-placeholder.jpg"
+                                        alt=""
+                                        eleventy:widths="600"
+                                        loading="lazy"
+                                        decoding="async"
+                                    >
+                                </a>
+                                <div class="flow allegro">
+                                    <a class="ucla-card__link" href="#"><h3>Document Title</h3></a>
+                                    <div class="flow presto">
+                                        <p>Document details</p>
+                                        <p class="with-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 242.7-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7 288 32zM64 352c-35.3 0-64 28.7-64 64l0 32c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-32c0-35.3-28.7-64-64-64l-101.5 0-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352 64 352zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/>
+                                            </svg>
+                                            <span>Download</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                        <li>
+                            <article class="document | flow moderato">
+                                <a class="image-link" href="#">
+                                    <sl-tag variant="primary" pill class="tag">Open Access</sl-tag>
+                                    <img
+                                        src="/assets/images/book-cover-placeholder.jpg"
+                                        alt=""
+                                        eleventy:widths="600"
+                                        loading="lazy"
+                                        decoding="async"
+                                    >
+                                </a>
+                                <div class="flow allegro">
+                                    <a class="ucla-card__link" href="#"><h3>Document Title</h3></a>
+                                    <div class="flow presto">
+                                        <p>Document details</p>
+                                        <p class="with-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 242.7-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7 288 32zM64 352c-35.3 0-64 28.7-64 64l0 32c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-32c0-35.3-28.7-64-64-64l-101.5 0-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352 64 352zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/>
+                                            </svg>
+                                            <span>Download</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                    </ul>
+                </article>
+            </div>
+            <div class="sidebar | flow andante">
+                <h2>Related Links</h2>
+                <ul class="related-links | flow allegro">
+                    <li><a href="#" class="ucla-related-link">Iranian Library</a></li>
+                    <li><a href="#" class="ucla-related-link">Encyclopedia of the Ancient Iranian World</a></li>
+                    <li><a href="#" class="ucla-related-link">The Significance of Persian Literature</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

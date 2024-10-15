@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ title }}</title>
+        <!-- Base stylesheet -->
+        <link rel="stylesheet" type="text/css" href="/styles/site.min.css">
+        <!-- Fonts -->
+        {% comment %}
+            <link rel="preconnect" href="https://fonts.bunny.net">
+            <link
+                href="https://fonts.bunny.net/css?family=commissioner:400,800|eb-garamond:400,700|libre-franklin:400,400i,700|quattrocento-sans:400,400i,700|source-sans-pro:400,400i,600,700"
+                rel="stylesheet"
+            >
+        {% endcomment %}
+        <link rel="preconnect" href="https://fonts.bunny.net">
+        <link href="https://fonts.bunny.net/css?family=eb-garamond:500i,600|public-sans:400,400i,700" rel="stylesheet">
+        <!-- Alpine UI -->
+        <script defer src="https://unpkg.com/@alpinejs/ui@3.14.1-beta.0/dist/cdn.min.js"></script>
+        <!-- Alpine Plugins -->
+        <script defer src="https://unpkg.com/@alpinejs/focus@3.14.1/dist/cdn.min.js"></script>
+        <!-- Alpine Core -->
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
+        <!-- HTMX -->
+        <script
+            src="https://unpkg.com/htmx.org@2.0.3"
+            integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq"
+            crossorigin="anonymous"
+            defer
+        ></script>
+        <!-- Shoelace -->
+        {% comment %} <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.17.1/cdn/themes/light.css"> {% endcomment %}
+        <script
+            type="module"
+            data-shoelace="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.17.1/cdn"
+        >
+            import 'https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.17.1/cdn/components/button/button.js';
+            import 'https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.17.1/cdn/components/icon/icon.js';
+            import 'https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.17.1/cdn/components/spinner/spinner.js';
+            import 'https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.17.1/cdn/components/breadcrumb/breadcrumb.js';
+            import 'https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.17.1/cdn/components/breadcrumb-item/breadcrumb-item.js';
+            import 'https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.17.1/cdn/components/dropdown/dropdown.js';
+            import 'https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.17.1/cdn/components/input/input.js';
+            import 'https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.17.1/cdn/components/select/select.js';
+            import 'https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.17.1/cdn/components/option/option.js';
+            import 'https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.17.1/cdn/components/tag/tag.js';
+            import 'https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.17.1/cdn/components/details/details.js';
+        </script>
+    </head>
+    <body>
+        {%- render 'partials/navigation/site-header.liquid' with sanity.navigation as navigation -%}
+        {%- block main -%}
+        {%- endblock %}
+        {%- render 'partials/navigation/site-footer.liquid' with sanity.navigation as navigation -%}
+        <!-- UCLA Design Systems JS -->
+        <script
+            type="text/javascript"
+            src="https://cdn.designsystem.brand.ucla.edu/build/v2.1.0/js/ucla-lib-scripts.min.js"
+            async
+        ></script>
+        <script type="module">
+            await Promise.allSettled([
+                customElements.whenDefined('sl-button'),
+                customElements.whenDefined('sl-icon'),
+                customElements.whenDefined('sl-spinner'),
+                customElements.whenDefined('sl-breadcrumb'),
+                customElements.whenDefined('sl-breadcrumb-item'),
+                customElements.whenDefined('sl-dropdown'),
+                customElements.whenDefined('sl-input'),
+                customElements.whenDefined('sl-select'),
+                customElements.whenDefined('sl-option'),
+                customElements.whenDefined('sl-tag'),
+                customElements.whenDefined('sl-details'),
+            ]);
+
+            console.log('Custom elements defined');
+
+            document.body.classList.add('page-ready');
+        </script>
+    </body>
+</html>

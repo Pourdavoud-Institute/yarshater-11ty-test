@@ -1,0 +1,115 @@
+:root {
+    --font-primary: "Public Sans", sans-serif;
+    --font-heading: "EB Garamond", serif;
+    --font-heading-weight: 600;
+    --font-size-normal: var(--sl-font-size-medium);
+    --font-size-smaller: var(--sl-font-size-small);
+    --font-size-larger: var(--sl-font-size-large);
+    --leading-normal: 1.6;
+    --leading-tight: var(--font-lineheight-0);
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-normal);
+    line-height: var(--leading-normal);
+}
+
+:is(h1, h2, h3, h4) {
+    font-family: var(--font-heading);
+    font-weight: var(--font-heading-weight);
+
+    &.with-rule {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2rem;
+            height: 3px;
+            width: 3rem;
+            background-color: var(--ucla-primary-blue);
+        }
+
+        & + p {
+            margin-block-start: var(--size-8);
+        }
+    }
+}
+
+h1 {
+    font-size: var(--sl-font-size-3x-large);
+}
+
+h2 {
+    font-size: var(--sl-font-size-2x-large);
+}
+
+h3 {
+    font-size: var(--sl-font-size-x-large);
+}
+
+a:not(.nav-link, .related-link, .logo-link) {
+    color: var(--ucla-darker-blue);
+    text-decoration: underline;
+
+    &:hover {
+        background-color: var(--ucla-lightest-blue);
+        text-decoration-color: transparent;
+    }
+}
+
+/* :is(p:not(.lead)) {
+    font-size: unset;
+    line-height: unset;
+}
+
+p.lead {
+    line-height: var(--leading-normal);
+} */
+
+/* .ucla-banner__quote p {
+    font-size: var(--font-size-6);
+} */
+
+.small-title {
+    font-size: var(--font-size-smaller);
+    font-family: var(--font-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.2ch;
+    font-weight: 800;
+
+    &.eyebrow {
+        color: var(--ucla-primary-blue);
+    }
+}
+
+/* :is(ol, ul) {
+    margin: 0;
+    padding-inline-start: var(--layout--gutter-spacing);
+} */
+
+.prose {
+    --block-spacing: var(--size-5);
+    --header-spacing: var(--size-8);
+
+    & > * + * {
+        margin-block-start: var(--block-spacing);
+    }
+
+    & > :is(h2, h3):not(:first-child) {
+        margin-block-start: var(--header-spacing);
+    }
+
+    &.grid {
+        display: grid;
+        grid-template-columns:
+            [fullwidth-start] 1fr [content-start] minmax(70%, 700px)
+            [content-end] 1fr [fullwidth-end];
+
+        & > * {
+            grid-column: content-start / content-end;
+        }
+    }
+}

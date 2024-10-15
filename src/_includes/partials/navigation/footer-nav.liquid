@@ -1,0 +1,18 @@
+<nav class="ucla-dept-footer__tertiary-nav">
+    {%- for entry in entries -%}
+        <div class="ucla-dept-footer__nav-column">
+            <p class="tertiary-nav-header">
+                {{ entry.title }}
+            </p>
+            {% if entry.showChildren and entry.children.size > 0 %}
+                <ul class="ucla-dept-footer__nav">
+                    {% for childEntry in entry.children %}
+                        <li>
+                            <a href="#">{{ childEntry.title }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    {%- endfor -%}
+</nav>

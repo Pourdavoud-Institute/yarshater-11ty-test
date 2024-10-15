@@ -1,0 +1,46 @@
+{
+    "name": "yarshater-11ty-test",
+    "version": "1.0.0",
+    "type": "module",
+    "watch": {
+        "dev:lcss": {
+            "patterns": [
+                "src/assets/styles"
+            ],
+            "extensions": "css",
+            "quiet": true,
+            "runOnChangeOnly": false
+        }
+    },
+    "scripts": {
+        "clean": "rm -rf _site",
+        "dev": "npm-run-all --parallel dev:* watch",
+        "dev:eleventy": "eleventy --serve",
+        "dev:lcss": "lightningcss --bundle --targets '>= 0.25%' src/assets/styles/site.css -o _site/styles/site.min.css",
+        "watch": "npm-watch",
+        "build": "npm-run-all build:lcss build:eleventy",
+        "build:eleventy": "eleventy",
+        "build:lcss": "npm run dev:lcss -- --minify"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "dependencies": {
+        "@11ty/eleventy": "^3.0.0"
+    },
+    "devDependencies": {
+        "@11ty/eleventy-fetch": "^4.0.1",
+        "@11ty/eleventy-img": "^4.0.2",
+        "@11ty/eleventy-navigation": "^0.3.5",
+        "@portabletext/to-html": "^2.0.13",
+        "@sanity/client": "^6.22.0",
+        "groq": "^3.57.4",
+        "htm": "^3.1.1",
+        "lightningcss-cli": "^1.27.0",
+        "npm-run-all": "^4.1.5",
+        "npm-watch": "^0.13.0",
+        "vhtml": "^2.2.0",
+        "voca": "^1.4.1"
+    }
+}

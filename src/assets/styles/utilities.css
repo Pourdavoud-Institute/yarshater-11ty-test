@@ -1,0 +1,92 @@
+.cover-image {
+    aspect-ratio: var(--aspect-ratio, 6/4);
+}
+
+.lqip-preview {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.center-all {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Use to trim the ucla container class inline padding (default 1.5rem) */
+.trim-inline {
+    padding-inline: 0.75rem;
+}
+
+.ratio-portrait {
+    aspect-ratio: 5/7;
+    object-fit: cover;
+}
+
+.ratio-landscape {
+    aspect-ratio: 3/2;
+    object-fit: cover;
+}
+
+.ratio-square {
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+.margin-x-auto {
+    margin-inline: auto;
+}
+
+.padding-y-section {
+    padding-block: var(--layout--section-spacing);
+}
+
+.bg-gray-1 {
+    background-color: var(--ucla-gray-1);
+}
+
+.image-scale-in {
+    &:hover img {
+        transform: scale(1.06);
+        filter: brightness(0.85);
+    }
+
+    & img {
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+.paragraph-width {
+    max-width: var(--layout--content-paragraph-width);
+}
+
+.font-size-3 {
+    font-size: var(--font-size-3);
+}
+
+.font-sm {
+    font-size: var(--font-size-smaller);
+}
+
+.font-md {
+    font-size: var(--font-size-normal);
+}
+
+.font-lg {
+    font-size: var(--font-size-larger);
+}
+
+.font-size-4 {
+    font-size: var(--font-size-4);
+}
+
+.sticky {
+    position: sticky;
+    top: 1rem;
+}
+
+.with-border-top {
+    border-block-start: 1px solid var(--theme--site--border);
+    padding-block-start: calc(var(--layout--gutter-spacing) * 2);
+}

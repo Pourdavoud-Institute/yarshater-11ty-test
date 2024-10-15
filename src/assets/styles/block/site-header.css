@@ -1,0 +1,59 @@
+/* .site-header {
+    &
+        :is(
+            .ucla-header--school__logo-link,
+            .ucla-header--school__site-title-link
+        ):hover {
+        opacity: 0.8;
+    }
+
+    & .row-top {
+        margin-block-start: var(--size-3);
+    }
+
+    & .ucla-main-nav {
+        margin-top: var(--size-2);
+    }
+
+    & .ucla-main-nav__toggle svg {
+        position: relative;
+        top: 2px;
+    }
+} */
+
+.site-header {
+    position: relative;
+    z-index: 50;
+    border-block-start: 0.5rem solid var(--ucla-primary-blue);
+    border-block-end: 1px solid var(--theme--site--border);
+
+    & .row {
+        &:first-child {
+            --cluster-justify: space-between;
+            margin-block-start: var(--size-3);
+        }
+
+        &:last-child {
+            margin-block-start: var(--size-1);
+        }
+    }
+
+    & .nav-primary {
+        --cluster-justify: flex-end;
+        --cluster-space: var(--size-1);
+    }
+
+    & .nav-secondary {
+        --cluster-space: var(--size-1);
+        --link-font-size: var(--font-size-smaller);
+    }
+
+    & sl-dropdown {
+        & .panel {
+            --link-font-weight: 400;
+            padding: var(--size-1);
+            background-color: white;
+            box-shadow: var(--shadow-3);
+        }
+    }
+}

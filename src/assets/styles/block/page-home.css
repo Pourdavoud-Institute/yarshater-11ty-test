@@ -1,0 +1,108 @@
+.page.home {
+    & .content-sections {
+        &.spacing-end {
+            margin-block-end: var(--layout--page-spacing);
+        }
+
+        & > * {
+            margin-block-start: var(--layout--page-spacing);
+        }
+
+        & > :first-child {
+            margin-block-start: 0;
+        }
+    }
+
+    & .hero {
+        position: relative;
+        overflow-y: hidden;
+
+        & header {
+            max-width: 70%;
+        }
+
+        & h1 {
+            font-size: var(--sl-font-size-4x-large);
+            color: var(--ucla-white);
+            display: inline;
+            background-color: color-mix(
+                in srgb,
+                var(--ucla-darker-blue),
+                transparent 15%
+            );
+            box-decoration-break: clone;
+            line-height: 1.5;
+            padding-inline: 1rem;
+            text-wrap: pretty;
+        }
+
+        & .text {
+            position: relative;
+            z-index: 2;
+            padding-block: var(--size-12);
+        }
+
+        & img {
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+
+    & .intro {
+        position: relative;
+        padding: var(--size-9);
+        background-color: var(--ucla-white);
+        margin-block-start: -3rem;
+        margin-inline: auto;
+        border-radius: var(--radius-2);
+        /* max-width: 90%; */
+        z-index: 2;
+        box-shadow: var(--shadow-3);
+
+        & p {
+            font-size: var(--font-size-4);
+        }
+    }
+
+    & .intro-news {
+        margin-block: var(--size-8);
+
+        & a {
+            font-size: var(--font-size-larger);
+            font-weight: 800;
+        }
+    }
+
+    & .hero-banner {
+        & .ucla-banner__ribbon {
+            background: var(--background);
+        }
+
+        & .ucla-ribbon--brand {
+            max-width: 30rem;
+        }
+
+        & h1 {
+            font-size: var(--font-size-7);
+            line-height: var(--leading-normal);
+        }
+
+        & p.lead {
+            line-height: var(--leading-normal);
+        }
+
+        & .text {
+            margin: 0 auto;
+        }
+    }
+
+    & .events {
+        border-block-start: 1px solid var(--ucla-gray-4);
+        margin-block-start: var(--space-8);
+        margin-block-end: var(--space-10);
+        padding-block-start: var(--space-8);
+    }
+}

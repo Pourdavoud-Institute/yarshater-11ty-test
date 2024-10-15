@@ -1,0 +1,111 @@
+.ucla-btn {
+    width: fit-content;
+}
+
+.ucla-side-navigation:has(.cluster) {
+    padding-block: var(--layout--gutter-spacing);
+    border-block-end: 1px solid var(--ucla-gray-5);
+    font-size: var(--font-size-1);
+
+    & .ucla-side-navigation__list {
+        border: 0;
+    }
+
+    & .ucla-side-navigation__list-item {
+        border: 0;
+    }
+
+    & .ucla-side-navigation__link {
+        padding-inline: 0.75rem;
+    }
+}
+
+.nav-link {
+    display: flex;
+    gap: var(--size-2);
+    font-weight: var(--link-font-weight, 700);
+    font-size: var(--link-font-size, var(--font-size-normal));
+    line-height: var(--font-lineheight-0);
+    border-radius: var(--radius-1);
+    text-decoration: none;
+    padding-inline: var(--link-padding-inline, var(--size-3));
+    padding-block: var(--link-padding-block, var(--size-2_5));
+
+    &:hover {
+        background: var(--ucla-primary-blue);
+        color: white;
+    }
+
+    &.small {
+        --link-padding-inline: var(--size-2);
+        --link-padding-block: var(--size-1);
+        --link-font-size: var(--font-size-smaller);
+    }
+}
+
+sl-button::part(base) {
+    font-weight: 700;
+}
+
+sl-button.dropdown-trigger {
+    &::part(base) {
+        --sl-input-height-medium: 0;
+        --sl-input-border-radius-medium: var(--radius-1);
+        --sl-spacing-small: 0;
+
+        font-size: var(--font-size-normal);
+        line-height: var(--font-lineheight-0);
+        border: 0;
+        padding-inline: var(--size-3);
+        padding-block: 0.75rem;
+
+        &:hover {
+            background: var(--ucla-primary-blue);
+            color: white;
+        }
+    }
+
+    &::part(label) {
+        padding: 0;
+    }
+
+    &::part(caret) {
+        margin-inline-start: 0.5rem;
+    }
+}
+
+.related-link {
+    display: inline-flex;
+    font-size: var(--font-size-larger);
+    text-decoration: underline;
+    font-weight: 700;
+    border: 1px solid var(--ucla-lighter-blue);
+    border-radius: var(--radius-2);
+    padding-inline: var(--size-5);
+    padding-block: var(--size-2_5);
+    transition: background-color 0.2s;
+
+    &:hover {
+        background-color: color-mix(
+            in srgb,
+            var(--ucla-lighter-blue),
+            transparent 75%
+        );
+        text-decoration-color: transparent;
+    }
+}
+
+.logo-link {
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.footer-link {
+    color: var(--ucla-lightest-blue);
+
+    &:hover {
+        background-color: var(--ucla-darkest-gold);
+        color: var(--ucla-darkest-blue);
+    }
+}

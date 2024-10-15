@@ -1,0 +1,52 @@
+{% layout 'layouts/base.liquid' %}
+
+{%- block main -%}
+<main class="page inner {{ page.fileSlug -}}">
+    <article class="hero featured">
+        <header class="grid-12 two-column split">
+            <div>
+                <div class="cover text-wrapper">
+                    {%- assign parentLinks = collections.all | eleventyNavigationBreadcrumb: title, navOptions -%}
+                    {%- render 'partials/navigation/breadcrumbs.liquid' with parentLinks as parentLinks -%}
+                    <div class="heading | flow andante">
+                        <h1>{{ title }}</h1>
+                        <div class="flow adagio">
+                            <p class="intro">{{ intro }}</p>
+                            {% comment %}
+                                <div class="ucla-side-navigation | flow moderato">
+                                    <div class="small-title">On this page:</div>
+                                    <ul class="ucla-side-navigation__list">
+                                        <li class="ucla-side-navigation__list-item">
+                                            <a href="#an-authoritative-reference" class="ucla-side-navigation__link"
+                                                >Heading</a
+                                            >
+                                        </li>
+                                        <li class="ucla-side-navigation__list-item">
+                                            <a href="#an-authoritative-reference" class="ucla-side-navigation__link"
+                                                >Heading</a
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
+                            {% endcomment %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <figure class="frame">
+                <img
+                    src="/assets/images/{{ image.src }}"
+                    alt="{{ image.alt }}"
+                    eleventy:widths="800"
+                    loading="eager"
+                >
+                <figcaption>{{ image.caption }}</figcaption>
+            </figure>
+        </header>
+        {%- block pageNavigation -%}
+        {%- endblock -%}
+    </article>
+    {%- block content -%}
+    {%- endblock -%}
+</main>
+{% endblock %}

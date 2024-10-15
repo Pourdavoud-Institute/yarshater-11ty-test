@@ -1,0 +1,25 @@
+---
+layout: layouts/base.liquid
+---
+<main class="page inner {{ page.fileSlug -}}">
+    <article>
+        <header class="hero">
+            <div class="container trim-inline">
+                <h1 class="pt-6">{{ data.title }}</h1>
+            </div>
+            <img src="/assets/images/background-scroll.jpg" alt="" eleventy:widths="1920" loading="eager">
+        </header>
+        <div class="ucla container margin-x-auto | with-sidebar">
+            {% if data.content %}
+                <div class="content | flow">
+                    {% for section in data.content %}
+                        <!-- Match Sanity section _type to partial path name - local file must exist -->
+                        {%- capture path -%} partials/sets/{{ section._type }}.liquid {%- endcapture -%}
+                        {% render path with section as data %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+            <div>sidebar</div>
+        </div>
+    </article>
+</main>

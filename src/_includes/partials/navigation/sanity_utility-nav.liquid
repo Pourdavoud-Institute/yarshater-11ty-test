@@ -1,0 +1,14 @@
+<nav id="nav-second" class="ucla-secondary-nav" aria-label="Secondary Menu">
+    <ul class="ucla-secondary-nav__list">
+        {% for entry in entries %}
+            <li class="ucla-secondary-nav__item">
+                <a
+                    href="{% navItemHref entry.navItem %}"
+                    class="ucla-secondary-nav__link {% if entry.callToAction -%} ucla-secondary-nav__link--active {%- endif -%}"
+                >
+                    {% navItemTitle entry.navItem %}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</nav>
