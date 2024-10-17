@@ -46,6 +46,10 @@
     & .nav-secondary {
         --cluster-space: var(--size-1);
         --link-font-size: var(--font-size-smaller);
+
+        & li:last-child {
+            margin-inline-start: 0.75rem;
+        }
     }
 
     & sl-dropdown {

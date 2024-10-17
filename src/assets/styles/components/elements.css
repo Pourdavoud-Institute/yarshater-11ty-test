@@ -60,6 +60,8 @@
 .card {
     position: relative;
     box-shadow: var(--shadow-2);
+    border-radius: var(--radius-2);
+    overflow: hidden;
     transition: box-shadow 0.2s;
 
     &:hover {

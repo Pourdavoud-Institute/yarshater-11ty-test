@@ -1,5 +1,11 @@
 .site-footer {
     & .department-footer {
+        --footer-link-bg: var(--ucla-lighter-blue);
+        --footer-link-border: color-mix(
+            in srgb,
+            var(--ucla-lightest-blue),
+            transparent 60%
+        );
         color: var(--ucla-white);
         background-color: var(--ucla-darker-blue);
         padding-block: var(--layout--section-spacing);
@@ -10,14 +16,28 @@
             }
 
             & .nav-wrapper {
-                grid-column: span 7;
+                margin-block-start: var(--size-7);
+                grid-column: 7 / span 6;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                column-gap: var(--size-7);
+            }
+
+            & .footer-link {
+                font-size: var(--font-size-smaller);
+                line-height: var(--font-lineheight-1);
             }
         }
     }
 
     & .ucla-global-footer {
+        font-size: var(--font-size-smaller);
         color: var(--ucla-lighter-blue);
         background-color: var(--ucla-darkest-blue);
         padding-block: var(--layout--gutter-spacing);
+
+        & .cluster:first-of-type {
+            --cluster-justify: space-between;
+        }
     }
 }

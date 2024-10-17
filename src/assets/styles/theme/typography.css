@@ -5,6 +5,7 @@
     --font-size-normal: var(--sl-font-size-medium);
     --font-size-smaller: var(--sl-font-size-small);
     --font-size-larger: var(--sl-font-size-large);
+    --font-size-hero: 3.75rem;
     --leading-normal: 1.6;
     --leading-tight: var(--font-lineheight-0);
 }

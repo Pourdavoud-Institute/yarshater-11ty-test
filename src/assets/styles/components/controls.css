@@ -47,6 +47,26 @@ sl-button::part(base) {
     font-weight: 700;
 }
 
+sl-button::part(base) {
+    --sl-button-font-size-medium: var(--font-size-normal);
+    --sl-button-font-size-small: var(--font-size-smaller);
+    --sl-input-height-small: 2rem;
+}
+
+sl-button[variant="primary"]::part(base) {
+    background-color: var(--ucla-primary-blue);
+    border-color: var(--ucla-primary-blue);
+
+    &:hover {
+        background-color: color-mix(
+            in srgb,
+            var(--ucla-primary-blue),
+            black 35%
+        );
+        border-color: color-mix(in srgb, var(--ucla-primary-blue), black 35%);
+    }
+}
+
 sl-button.dropdown-trigger {
     &::part(base) {
         --sl-input-height-medium: 0;
@@ -103,9 +123,11 @@ sl-button.dropdown-trigger {
 
 .footer-link {
     color: var(--ucla-lightest-blue);
+    text-decoration-color: var(--footer-link-border, inherit);
 
     &:hover {
-        background-color: var(--ucla-darkest-gold);
-        color: var(--ucla-darkest-blue);
+        background-color: var(--footer-link-bg, var(--ucla-darkest-gold));
+        color: var(--footer-link-color, var(--ucla-darkest-blue));
+        text-decoration-color: transparent;
     }
 }
